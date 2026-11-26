@@ -45,12 +45,25 @@ codex mcp login gethumandesign
 gemini mcp add --transport http gethumandesign https://api.gethumandesign.com/mcp
 ```
 
-**Cursor, VS Code, Windsurf and other clients** that take a JSON config:
+**Cursor, Windsurf and other clients** that take an `mcpServers` config:
 
 ```json
 {
   "mcpServers": {
     "gethumandesign": {
+      "url": "https://api.gethumandesign.com/mcp"
+    }
+  }
+}
+```
+
+**VS Code** (`.vscode/mcp.json` or the user MCP configuration):
+
+```json
+{
+  "servers": {
+    "gethumandesign": {
+      "type": "http",
       "url": "https://api.gethumandesign.com/mcp"
     }
   }
